@@ -1,0 +1,20 @@
+El proyecto: "Perfiles de riesgo cardíaco mediante clustering"
+
+El problema real: Los médicos saben que no todos los pacientes con riesgo cardíaco son iguales. Algunos tienen presión alta pero colesterol normal; otros son jóvenes pero sedentarios. El clustering permite descubrir grupos naturales en los datos sin que nadie le diga al algoritmo qué buscar — y esos grupos pueden tener implicancias clínicas distintas.
+
+El dataset: Vas a usar el Heart Disease UCI dataset, disponible en Kaggle. Tiene ~300 pacientes con 13 variables cada uno: edad, sexo, tipo de dolor de pecho, presión arterial en reposo, colesterol, frecuencia cardíaca máxima, etc. Es limpio, bien documentado, y perfecto para un primer proyecto.
+
+K-Means en palabras simples:
+
+Vos le decís cuántos grupos (K) querés
+El algoritmo coloca K puntos aleatorios en el espacio — se llaman centroides
+Cada paciente se asigna al centroide más cercano
+Los centroides se mueven al centro de su grupo
+Se repiten los pasos 3 y 4 hasta que los centroides dejan de moverse
+
+El problema es que necesitás decidir K antes de correr el algoritmo. ¿Pero cómo sabés cuántos grupos hay en los datos?
+Para eso existe el Elbow Method (método del codo). La idea es:
+
+Corrés K-Means con K=2, luego K=3, K=4... hasta K=10
+Para cada K medís la inercia — qué tan compactos son los grupos (menor inercia = grupos más apretados)
+Graficás inercia vs K y buscás el "codo" — el punto donde agregar más clusters deja de mejorar significativamente
