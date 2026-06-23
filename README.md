@@ -13,7 +13,9 @@ The project follows a five-stage pipeline:
 In the end, the K-Means algorithm identified three distinct patient profiles without access to the original diagnosis:
 
 Cluster 1 — Low Risk: Youngest patients (avg. 48.9 years), lowest cholesterol (228.6 mg/dl), and highest maximum heart rate (164.7 bpm). Most favorable cardiovascular indicators.
+
 Cluster 0 — Moderate Risk: Older patients (avg. 58.1 years) with elevated cholesterol (268.9 mg/dl) and moderately reduced maximum heart rate (151.3 bpm).
+
 Cluster 2 — High Risk: Same age range as Cluster 0 (avg. 58.1 years) but significantly higher cardiac stress (oldpeak: 1.9 vs 0.5–0.6 in other clusters) and the lowest maximum heart rate (131.4 bpm), indicating reduced cardiac function.
 
 These profiles were discovered purely from clinical variables, without using the diagnosis column, demonstrating the power of unsupervised learning to reveal structure in medical data.
